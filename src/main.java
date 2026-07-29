@@ -1,5 +1,68 @@
+import java.util.Scanner;
+
 public class main {
     public static void main(String[] args) {
+        Scanner leitura = new Scanner(System.in);
+        Banco banco = new Banco();
 
+        User user1 = new User(1, "João Silva", "joao@email.com", 119876543);
+        Chat chat1 = new Chat(user1.getId(), user1.getName());
+        banco.addUser(user1);
+        banco.addChat(chat1);
+
+        User user2 = new User(2, "Maria Souza", "maria@email.com", 219123456);
+        Chat chat2 = new Chat(user2.getId(), user2.getName());
+        banco.addUser(user2);
+        banco.addChat(chat2);
+
+        User user3 = new User(3, "Pedro Santos", "pedro@email.com", 319654321);
+        Chat chat3 = new Chat(user3.getId(), user3.getName());
+        banco.addUser(user3);
+        banco.addChat(chat3);
+
+        User user4 = new User(4, "Ana Costa", "ana@email.com", 419112233);
+        Chat chat4 = new Chat(user4.getId(), user4.getName());
+        banco.addUser(user4);
+        banco.addChat(chat4);
+
+        User user5 = new User(5, "Lucas Oliveira", "lucas@email.com", 519998877);
+        Chat chat5 = new Chat(user5.getId(), user5.getName());
+        banco.addUser(user5);
+        banco.addChat(chat5);
+
+        int escolha = 0;
+
+        System.out.println("""
+                    Bem vindo ao JavaZap!
+                    
+                    O que voce deseja fazer?
+                    
+                    1 - Ver mensagens recebidas
+                    2 - enviar mensagem
+                    3 - Sair
+                    """);
+
+        escolha = leitura.nextInt();
+
+        while (escolha != 5) {
+
+
+
+            switch (escolha) {
+                case 1:
+
+                    break;
+
+                case 2:
+
+                    break;
+
+                case 3:
+                    System.out.println("Encerrando JavaZap...");
+                    break;
+            }
+
+
+        }
     }
 }
