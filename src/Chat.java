@@ -18,52 +18,53 @@ public class Chat {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNameChat() {
+        return nameChat;
+    }
+
+    public void setNameChat(String nameChat) {
+        this.nameChat = nameChat;
+    }
+
     public void sendMessage(Message message){
         messages.add(message);
     }
-
 
     public ArrayList<Message> MessageList() {
         return messages;
     }
 
-
     public void receiveMessage(){
 
     }
 
-    public void classificationMessage(){
-
+    public void classificationMessage(Message message){
+        //logica onde definimos se e necessario emitir alerta
     }
 
-    public void emitirAlerta(Message message) {
-        if(message.getClassification().equals(Classifications.LEGITIMATE)){
-
-        }else if (message.getClassification().equals(Classifications.SUSPECT)) {
-            System.out.println("Mensagem suspeita detectada. Tome ao responder, evite enviar dados ou acesssar links");
+    public String showAlert(Message message) {
+        if(message.getClassification().equals(Classifications.SUSPECT)) {
+            return "Mensagem suspeita detectada. Tome ao responder, evite enviar dados ou acesssar links";
         }else if (message.getClassification().equals(Classifications.SCAM)){
-            System.out.println("Possível golpe detectado. Favor ignorar esta mensagem.");
+            return "Possível golpe detectado. Favor ignorar esta mensagem.";
         }
+        return "Erro durante a analise";
     }
 
-    public void listChats(){
-        if(!banco.getChat().isEmpty()){
-            System.out.println("Chats disponíveis: \n");
-            for (Chat chat : banco.getChat()){
-                System.out.println(chat + "\n");
+    public void messageList() {
+        if(!messages.isEmpty()){
+            System.out.println("Chat" + nameChat +":\n");
+            for (Message message : messages){
+                System.out.println(message.getContentMessage());
             }
         }else{
-            System.out.println("Nenhum chat disponivel.");
+            System.out.println("Nenhuma mensagem.");
         }
+
     }
 
-    //enviarMensagem()
-
-    //receberMensagem()
-
-    //classificarMensagem()
-
-    //Atualiza a classificacao da mensagem
-
-    //emitirAlerta() obs:caso necessario
 }

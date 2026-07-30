@@ -30,7 +30,7 @@ public class main {
         banco.addUser(user5);
         banco.addChat(chat5);
 
-        int escolha = 0;
+        int choice = 0;
 
         System.out.println("""
                     Bem vindo ao JavaZap!
@@ -42,18 +42,29 @@ public class main {
                     3 - Sair
                     """);
 
-        escolha = leitura.nextInt();
+        choice = leitura.nextInt();
 
-        while (escolha != 5) {
+        while (choice != 5) {
 
-
-
-            switch (escolha) {
+            switch (choice) {
                 case 1:
 
                     break;
 
                 case 2:
+                    int choiceChat;
+                    if(!banco.getChat().isEmpty()){
+                        int i = 1;
+                        System.out.println("Chats disponíveis: \n");
+                        for (Chat chat : banco.getChat()){
+                            System.out.println( i + " - " + chat.getNameChat() + "\n");
+                            i ++;
+                        }
+                    }else{
+                        System.out.println("Nenhum chat disponivel.");
+                    }
+
+                    choiceChat = leitura.nextInt();
 
                     break;
 
