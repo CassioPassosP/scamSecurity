@@ -18,6 +18,10 @@ public class Chat {
         this.messages = new ArrayList<>();
     }
 
+    public int getId() {
+        return id;
+    }
+
     public String getNameChat() {
         return nameChat;
     }
