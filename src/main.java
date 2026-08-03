@@ -14,7 +14,7 @@ public class main {
         banco.addUser(user1);
         banco.addChat(chat1);
 
-        User user2 = new User(2, "Maria Souza", "maria@email.com", 219123456);
+        User user2 = new User(2, "219123456", "maria@email.com", 219123456);
         Chat chat2 = new Chat(user2.getId(), user2.getName());
         banco.addUser(user2);
         banco.addChat(chat2);
@@ -24,7 +24,7 @@ public class main {
         banco.addUser(user3);
         banco.addChat(chat3);
 
-        User user4 = new User(4, "Ana Costa", "ana@email.com", 419112233);
+        User user4 = new User(4, "419112233", "ana@email.com", 419112233);
         Chat chat4 = new Chat(user4.getId(), user4.getName());
         banco.addUser(user4);
         banco.addChat(chat4);

@@ -1,5 +1,6 @@
 package repository;
 
+import model.Chat;
 import model.User;
 
 import java.util.ArrayList;
