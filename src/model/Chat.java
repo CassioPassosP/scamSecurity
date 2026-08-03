@@ -1,10 +1,14 @@
+package model;
+
+import repository.Database;
+
 import java.util.ArrayList;
 
 public class Chat {
     private int id;
     private String nameChat;
     private ArrayList<Message> messages;
-    private Banco banco;
+    private Database banco;
 
     public Chat() {}
 
@@ -57,7 +61,7 @@ public class Chat {
 
     public void messageList() {
         if(!messages.isEmpty()){
-            System.out.println("Chat" + nameChat +":\n");
+            System.out.println("model.Chat" + nameChat +":\n");
             for (Message message : messages){
                 System.out.println(message.getContentMessage());
             }

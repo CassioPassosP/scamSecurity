@@ -1,9 +1,13 @@
+import model.Chat;
+import model.User;
+import repository.Database;
+
 import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
         Scanner leitura = new Scanner(System.in);
-        Banco banco = new Banco();
+        Database banco = new Database();
 
         User user1 = new User(1, "João Silva", "joao@email.com", 119876543);
         Chat chat1 = new Chat(user1.getId(), user1.getName());
