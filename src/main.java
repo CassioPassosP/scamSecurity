@@ -143,7 +143,7 @@ public class main {
                     System.out.println("Escolha um chat para vizualizar(Digite o numero do chat): \n");
                     messageChats = leitura.nextInt();
 
-                    //.stream() - pega sua lista e transforma em um fluxo de dados em movimento, que vai sendo percorrido item por item
+                    //.stream() - pega a lista e transforma em um fluxo de dados em movimento que vai sendo percorrido item por item
                     //.filter(chat -> chat.getId() == messageChats) - para cada chat que passar verifique se o id ele e igual a messageChats(numero id escolhido por nos)
                     //.findFirst() - Pega o primeiro que passar e para o stream
                     //.orElse(null) - Se achou, entrega o usuário. Se não achou, vira null

@@ -14,7 +14,7 @@ public class MessageAnalyzer {
         //palavras padrao para possiveis golpes
         Pattern scamPattern = Pattern.compile("pix|0800|Ganhou|Brinde|Sorteio|iPhone|Herança|Urgente|Imediato|Bloqueio|Retido|Multa|Aprovado|R\\$\\s*\\d+", Pattern.CASE_INSENSITIVE);
 
-        // verifica se encontrou padroes usando, caso encontrem isScam ou isSuspect terao o valor true.
+        // verificam se encontraram padroes usando os patterns a cima, caso encontrem isScam ou isSuspect terao o valor true.
         //.mathcer() - recebe uma String
         //.find() - procura a coerencia
         boolean isScam = scamPattern.matcher(message.getContentMessage()).find();
