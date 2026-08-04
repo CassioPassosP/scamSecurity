@@ -1,6 +1,11 @@
+package repository;
+
+import model.Chat;
+import model.User;
+
 import java.util.ArrayList;
 
-public class Banco{
+public class Database {
     private ArrayList<User> users = new ArrayList<>();
     private ArrayList<Chat> chats = new ArrayList<>();
 

@@ -1,3 +1,7 @@
+package model;
+
+import service.MessageAnalyzer;
+
 import java.time.LocalDateTime;
 
 public class Message {
@@ -6,8 +10,7 @@ public class Message {
     private String sender;
     private LocalDateTime dateAndTime;
     private Classifications classification;
-
-    public Message() {}
+    private MessageAnalyzer messageAnalyzer;
 
     public Message(int id, String contentMessage, String sender, LocalDateTime dateAndTime, Classifications classification) {
         this.id = id;
@@ -26,7 +29,7 @@ public class Message {
     }
 
     public String getContentMessage() {
-        return contentMessage;
+        return "    Mensagen: " + contentMessage + "\n";
     }
 
     public void setContentMessage(String contentMessage) {
