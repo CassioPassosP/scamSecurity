@@ -9,12 +9,13 @@ public class MessageAnalyzer {
 
     //funcao que procura as palavras padrao para realizar a classificacao
     public void classificationMessage(Message message){
-        //palavras padrao para mensagens suspeitas
+        //palavras padrao para mensagens suspeitas. Pattern.CASE_INSENSITIVE - Essa constante faz com que a busca nao diferencie letras maiusculas e minusculas
+        // | significa "OU" na regex
         Pattern suspectPattern = Pattern.compile("Link|Acesse|Clique|Atualize|Verifique|Alerta|Segurança|Aviso|Conta|CPF|Código|Token|Renda|Extra", Pattern.CASE_INSENSITIVE);
         //palavras padrao para possiveis golpes
         Pattern scamPattern = Pattern.compile("pix|0800|Ganhou|Brinde|Sorteio|iPhone|Herança|Urgente|Imediato|Bloqueio|Retido|Multa|Aprovado|R\\$\\s*\\d+", Pattern.CASE_INSENSITIVE);
 
-        // verifica se encontrou padroes usando, caso encontrem isScam ou isSuspect terao o valor true.
+        // verificam se encontraram padroes usando os patterns a cima, caso encontrem isScam ou isSuspect terao o valor true.
         //.mathcer() - recebe uma String
         //.find() - procura a coerencia
         boolean isScam = scamPattern.matcher(message.getContentMessage()).find();

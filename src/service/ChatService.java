@@ -8,10 +8,10 @@ import java.util.List;
 public class ChatService {
     MessageAnalyzer analyzer = new MessageAnalyzer();
 
-    //funcao criada para analisar todas as mensagens do chat recebido nos paramentros
+    // Retorna uma List em vez de ArrayList, pois o metodo precisa apenas fornecer
     public List<Message> getAnalyzedChatMessages(Chat chat){
 
-        //percorre as mensagens do chat chamando a funcao .classificationMessage() responsavel por analisar e classificar a mensagem
+        // Percorre todas as mensagens do chat analisando e classificando cada uma
         for(Message message : chat.MessageList()){
             analyzer.classificationMessage(message);
         }
