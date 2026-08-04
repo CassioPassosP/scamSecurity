@@ -12,8 +12,6 @@ public class Message {
     private Classifications classification;
     private MessageAnalyzer messageAnalyzer;
 
-    public Message() {}
-
     public Message(int id, String contentMessage, String sender, LocalDateTime dateAndTime, Classifications classification) {
         this.id = id;
         this.contentMessage = contentMessage;

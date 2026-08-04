@@ -1,15 +1,11 @@
 package model;
 
-import repository.Database;
-
 import java.util.ArrayList;
 
 public class Chat {
     private int id;
     private String nameChat;
     private ArrayList<Message> messages;
-
-    public Chat() {}
 
     public Chat(int id, String nameChat) {
         this.id = id;
