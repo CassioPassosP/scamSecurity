@@ -4,16 +4,17 @@ import model.Chat;
 import model.User;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Database {
-    private ArrayList<User> users = new ArrayList<>();
-    private ArrayList<Chat> chats = new ArrayList<>();
+    private List<User> users = new ArrayList<>();
+    private List<Chat> chats = new ArrayList<>();
 
     public void addUser(User user) {
         users.add(user);
     }
 
-    public ArrayList<User> getUsers() {
+    public List<User> getUsers() {
         return users;
     }
 
@@ -21,7 +22,7 @@ public class Database {
         chats.add(chat);
     }
 
-    public ArrayList<Chat> getChat() {
+    public List<Chat> getChat() {
         return chats;
     }
 }
