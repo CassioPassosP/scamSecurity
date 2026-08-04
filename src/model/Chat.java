@@ -1,11 +1,12 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Chat {
     private int id;
     private String nameChat;
-    private ArrayList<Message> messages;
+    private List<Message> messages;
 
     public Chat(int id, String nameChat) {
         this.id = id;
@@ -27,7 +28,7 @@ public class Chat {
     }
 
     //Essa funcao retorna toda a lista de mensagem
-    public ArrayList<Message> MessageList() {
+    public List<Message> MessageList() {
         return messages;
     }
 
