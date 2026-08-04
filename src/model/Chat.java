@@ -8,7 +8,6 @@ public class Chat {
     private int id;
     private String nameChat;
     private ArrayList<Message> messages;
-    private Database banco;
 
     public Chat() {}
 
@@ -26,10 +25,12 @@ public class Chat {
         return nameChat;
     }
 
-    public void sendMessage(Message message){
+    //Essa funcao adiciona uma nova mensagem no chat
+    public void saveMessage(Message message){
         messages.add(message);
     }
 
+    //Essa funcao retorna toda a lista de mensagem
     public ArrayList<Message> MessageList() {
         return messages;
     }
