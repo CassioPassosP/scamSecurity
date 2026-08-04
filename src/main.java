@@ -75,7 +75,7 @@ public class main {
                 // Falsa vaga de emprego
                 "Vaga de renda extra! Ganhe R$ 500 por dia trabalhando de casa. Cadastre-se agora.",
 
-                // Entrega suspeits
+                // Entrega suspeita
                 "Sua encomenda está retida. Clique no link para pagar a taxa de liberação.",
 
                 // Legítima
@@ -88,7 +88,7 @@ public class main {
                 "Seu WhatsApp será bloqueado em 24 horas. Confirme seu código de verificação para evitar o bloqueio."
         };
 
-        // loop usado para inserir o array de mensagens exemplo nos chats criados
+        // loop usado para inserir o array de mensagens mockadas nos chats criados
         for(int i = 0; i < database.getChat().size(); i++){
             Chat chat = database.getChat().get(i);
 
